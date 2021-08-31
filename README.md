@@ -61,6 +61,14 @@ Type
 
 vi ~/.bash_profile
 
-export M2_HOME=/usr/local/apache-maven/apache-maven-3.3.3
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.8.2
 export M2=%M2_HOME%/bin
 export MAVEN_OPTS=-Xms256m -Xmx512m
+
+Step 6: Add Maven bin directory location to system path
+Windows: Append the string ;%M2% to the end of the system variable.
+MAC: export PATH=$M2:$PATH
+
+Step 7 : Verify Maven installation
+
+mvn -version

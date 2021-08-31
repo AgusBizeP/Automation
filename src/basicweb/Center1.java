@@ -31,7 +31,7 @@ public class Center1 {
     }
 
  //Test Case number 1,2,3 - Empty fields
-    @Test
+   //@Test
     public void testCase1() {
      
        // click on Submit button
@@ -79,7 +79,7 @@ public class Center1 {
 
 
    //test Case 11 - Sign up - "Email",  "Password" and "Please confirm password" -  login successful
-   @Test
+  //@Test
     public void testCase2() {
        
 	  String expectedMsgSuccessful = "Business details";
@@ -117,7 +117,7 @@ public class Center1 {
    
    
    //Test Cases 12  Empty Required fields company
-    @Test
+   // @Test
     public void testCase3() {
 
   	   //Populate fields
@@ -176,7 +176,7 @@ public class Center1 {
           
     }
     	//Test Case 26 - Terms & Conditions - Click on Submit agreeing  to conditions
-   @Test
+  //@Test
     public void testCase4() {
 
        
@@ -324,19 +324,21 @@ public class Center1 {
        //validate errors are gone
 
 	      
- 	      ArrayList<WebElement> errorMessages1 = (ArrayList<WebElement>) driver.findElements(By.className("help"));
+ 	      ArrayList<WebElement> errorMessages2 = (ArrayList<WebElement>) driver.findElements(By.className("help"));
 	      boolean isDisplayed1 = false;
-	      int size1 = errorMessages1.size();
+	      int size1 = errorMessages2.size();
 	      System.out.println("Size of the list: " + size1);
 	      for(int i=0; i<size1; i++) {
-	      isDisplayed1 = errorMessages1.get(i).isSelected();
+	      isDisplayed1 = errorMessages2.get(i).isSelected();
 
 	      }
+	      
+	      
 	      int expectedErrorMessages2 = 0;
-	      int actualErrorMessages2 = size;
+	      int actualErrorMessages2 = size1;
 	      
 	      if (actualErrorMessages2==expectedErrorMessages2){
-              System.out.println("Test Case 5 --> PASSED");
+             System.out.println("Test Case 5 --> PASSED");
           }
           else {
               System.out.println("Test Case 5 --> FAILED");
