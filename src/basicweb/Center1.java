@@ -226,16 +226,31 @@ public class Center1 {
        
        // click on Next
        driver.findElement(By.className("is-link")).click();
-       driver.findElement(By.className("is-link")).click();
+       
+
+       // click on Next
+       driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[6]/button[2]")).click();
        
        // Check box
-       driver.findElement(By.className("terms")).click();
+       driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/form/div[1]/div/label/input")).click();
        //click on Submit
-       driver.findElement(By.className("is-link")).click();
+       driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/form/div[2]/button[2]")).click();
        
-   		}  
-		
-       
+   		 
+   
+	   String expectedCompleteSuccessful = "Completed";
+	   
+	   String messageValidation1 = driver.findElement(By.className("title")).getText();
+	
+	   if (messageValidation1.contentEquals(expectedCompleteSuccessful)){
+	       System.out.println("Test Case 4 --> PASSED");
+	   }
+	   else {
+	       System.out.println("Test Case 4 --> FAILED");
+	   }
+   		
+} 
+
        // validate error messages disappear when completing fields
        //@Test 
  
