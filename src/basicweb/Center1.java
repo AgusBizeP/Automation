@@ -33,7 +33,7 @@ public class Center1 {
     }
 
  //Test Case number 1,2,3 - Empty fields
-   // @Test
+    @Test
     public void testCase1() {
      
        // click on Submit button
@@ -81,7 +81,7 @@ public class Center1 {
 
 
    //test Case 11 - Sign up - "Email",  "Password" and "Please confirm password" -  login successful
-   //@Test
+   @Test
     public void testCase2() {
        
 	  String expectedMsgSuccessful = "Business details";
@@ -119,7 +119,7 @@ public class Center1 {
    
    
    //Test Cases 12  Empty Required fields company
-   // @Test
+    @Test
     public void testCase3() {
 
   	   //Populate fields
@@ -252,7 +252,7 @@ public class Center1 {
 } 
 
        // validate error messages disappear when completing fields
-       //@Test 
+       @Test 
  
        public void testCase5() {
     	 //Populate fields
