@@ -8,14 +8,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import junit.framework.Assert;
-
 
 import org.openqa.selenium.WebElement;
 
 public class Center1 {
-    //System.setProperty('webdriver.chrome.driver', '../Drivers/chromedriver');
+    
     private WebDriver driver;
     private String baseURL;
 
@@ -24,6 +21,7 @@ public class Center1 {
     
     //Go to http://qa-test-v1.s3-website-ap-southeast-2.amazonaws.com/
     public void SetUp() throws Exception {
+    	//System.setProperty("webdriver.chrome.driver", "../../Drivers/chromedriver");
         baseURL = "http://qa-test-v1.s3-website-ap-southeast-2.amazonaws.com/";
         driver = new ChromeDriver();
         driver.manage().window().maximize();
